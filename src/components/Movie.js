@@ -21,8 +21,7 @@ const Movie = ({ movie }) => {
           <h3 className="movie__title">{movie.title || movie.name}</h3>
           <ul className="movie__genre">
             {movie.genre_ids
-              .map(gid => genres.filter(g => g.id === gid).map(g => g.name))
-              // .reduce((prev, next) => prev.concat(next))
+              .map(gid => genres.filter(genre => genre.id === gid).map(genre => genre.name))              
               .slice(0, 3)
               .map((genre, i) => (
                 <li key={i} className="movie__genre-item">

@@ -98,20 +98,20 @@ const Main = () => {
         {activeComingSoonLink
           ? loadingUpcomingMovies
             ? <Loader />
-            : upcomingMovies.map(m => (
+            : upcomingMovies.map(movie => (
                 <Movie
-                  key={m.id}
-                  movie={m}
+                  key={movie.id}
+                  movie={movie}
                 />
               ))
           : null}
         {activePopularLink
           ? loadingPopularMovies
             ? <Loader />
-            : popularMovies.map(m => (
+            : popularMovies.map(movie => (
                 <Movie
-                  key={m.id}
-                  movie={m}
+                  key={movie.id}
+                  movie={movie}
                 />
               ))
           : null}
