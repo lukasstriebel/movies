@@ -24,7 +24,7 @@ const Header = () => {
   }, []);
 
   const path = images.secure_base_url;
-  const imgSize = images.backdrop_sizes[2];
+  const imageSize = images.backdrop_sizes[2];
 
   if (loading) {
     return false;
@@ -38,26 +38,26 @@ const Header = () => {
         previousButton=""
         nextButton=""
       >
-        {nowPlaying.map(m => (
+        {nowPlaying.map(movie => (
           <div
-            key={m.id}
+            key={movie.id}
             className="slider-item"
             style={{
-              background: `linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,.5)), url(${path}${imgSize}${
-                m.backdrop_path
+              background: `linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,.5)), url(${path}${imageSize}${
+                movie.backdrop_path
               }) no-repeat center top / cover`
             }}
           >
             <header>
               <span>Now Playing</span>
-              <h2>{m.title}</h2>
+              <h2>{movie.title}</h2>
               <ul className="genre-list">
-                {m.genre_ids
-                  .map(mg => genres.filter(g => g.id === mg).map(g => g.name))
+                {movie.genre_ids
+                  .map(movieGenre => genres.filter(genre => genre.id === movieGenre).map(genre => genre.name))
                   .reduce((prev, next) => prev.concat(next))
                   .slice(0, 3)
-                  .map((genre, i) => (
-                    <li key={i}>{genre}</li>
+                  .map((genre, index) => (
+                    <li key={index}>{genre}</li>
                   ))}
               </ul>
             </header>

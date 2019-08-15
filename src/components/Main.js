@@ -88,10 +88,10 @@ const Main = () => {
         {activeInTheatersLink
           ? loadingMoviesInTheaters
             ? <Loader />
-            : moviesInTheaters.map(m => (
+            : moviesInTheaters.map(movie => (
                 <Movie
-                  key={m.id}
-                  movie={m}
+                  key={movie.id}
+                  movie={movie}
                 />
               ))
           : null}
