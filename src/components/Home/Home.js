@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Movie from "./Movie";
-import Loader from "./Loader";
+import Movie from "../Movie";
+import Loader from "../Loader";
 
 import Axios from "axios";
 

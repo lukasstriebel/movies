@@ -32,8 +32,6 @@ const Header = () => {
   return (
     <header>
       <Slider
-        // direction="vertical"
-        // duration={2000}
         autoplay={3500}
         previousButton=""
         nextButton=""
