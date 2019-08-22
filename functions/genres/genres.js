@@ -16,7 +16,6 @@ exports.handler = function(event, context, callback) {
     axios
       .get(URL)
       .then(response => {
-        // console.log(response.data);
         pass(response.data);
       })
       .catch(err => pass(err));
