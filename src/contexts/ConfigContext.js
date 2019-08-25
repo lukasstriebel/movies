@@ -4,6 +4,7 @@ import Axios from "axios";
 export const ConfigContext = createContext();
 
 const ConfigContextProvider = props => {
+
   const [images, setImages] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -17,7 +18,6 @@ const ConfigContextProvider = props => {
   if (loading) {
     return false;
   }
-
   return (
     <ConfigContext.Provider value={images}>
       {props.children}
